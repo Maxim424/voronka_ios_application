@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Gifu",
+        "repositoryURL": "https://github.com/kaishin/Gifu.git",
+        "state": {
+          "branch": "master",
+          "revision": "c8c8cd8e98eb73b8353b612c2925461c956fddc8",
+          "version": null
+        }
+      },
+      {
+        "package": "SnapKit",
+        "repositoryURL": "https://github.com/SnapKit/SnapKit",
+        "state": {
+          "branch": "develop",
+          "revision": "58320fe80522414bf3a7e24c88123581dc586752",
+          "version": null
+        }
+      },
+      {
+        "package": "TTGTags",
+        "repositoryURL": "https://github.com/zekunyan/TTGTagCollectionView.git",
+        "state": {
+          "branch": null,
+          "revision": "8f05eded6a02086ac8a152e494c535bc4ccc23bc",
+          "version": "2.3.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
