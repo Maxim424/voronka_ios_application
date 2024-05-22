@@ -661,7 +661,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.9.0;
-				DEVELOPMENT_TEAM = FUD5CPHJR9;
+				DEVELOPMENT_TEAM = YK49B357PZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Voronka/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -675,7 +675,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.9.0;
-				PRODUCT_BUNDLE_IDENTIFIER = su.brf.apps.Voronka;
+				PRODUCT_BUNDLE_IDENTIFIER = "su.brf.apps.Voronka-hse";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -691,7 +691,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.9.0;
-				DEVELOPMENT_TEAM = FUD5CPHJR9;
+				DEVELOPMENT_TEAM = YK49B357PZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Voronka/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -705,7 +705,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.9.0;
-				PRODUCT_BUNDLE_IDENTIFIER = su.brf.apps.Voronka;
+				PRODUCT_BUNDLE_IDENTIFIER = "su.brf.apps.Voronka-hse";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
