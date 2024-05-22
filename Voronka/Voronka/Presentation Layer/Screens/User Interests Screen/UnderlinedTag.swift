@@ -10,43 +10,48 @@ import UIKit
 import TagListView
 
 extension TagView {
+    private enum Constants {
+        static let animationDuration: TimeInterval = 0.4
+        static let animationDelay: TimeInterval = 0.1
+        static let underlinedHeight: CGFloat = 2
+        static let viewOffset: CGFloat = 5
+    }
+
     func resetSelection() {
         isSelected = false
         underlinedView.backgroundColor = .clear
         textColor = AppConstants.Design.Color.GrayScale.Medium
     }
-    
-    private func underlineView() {
-        addSubview(underlinedView)
 
+    private func configureUnderlineView() {
+        guard underlinedView.superview == nil else { return }
+
+        addSubview(underlinedView)
         underlinedView.pinTop(to: bottomAnchor)
-        underlinedView.pinLeft(to: leadingAnchor, viewOffset)
-        underlinedView.pinRight(to: trailingAnchor, viewOffset)
-        underlinedView.setHeight(to: 2)
+        underlinedView.pinLeft(to: leadingAnchor, Int(Constants.viewOffset))
+        underlinedView.pinRight(to: trailingAnchor, Int(Constants.viewOffset))
+        underlinedView.setHeight(to: Constants.underlinedHeight)
     }
 
     func categoriesSelected() {
-        underlineView()
-        UIView.animate(withDuration: 0.4, delay: 0.1, animations: {}) { _ in
-            UIView.transition(with: self, duration: 0.3) {
-                self.textColor = self.isSelected ? .white : AppConstants.Design.Color.GrayScale.Medium
-            }
-            UIView.transition(with: self, duration: 0.2) {
-                self.underlinedView.backgroundColor = self.isSelected ? AppConstants.Design.Color.Primary.Blue : .clear
-            }
+        configureUnderlineView()
+        animateChanges {
+            self.textColor = self.isSelected ? .white : AppConstants.Design.Color.GrayScale.Medium
+            self.underlinedView.backgroundColor = self.isSelected ? AppConstants.Design.Color.Primary.Blue : .clear
         }
     }
-    
+
     func interestSelected() {
-        UIView.animate(withDuration: 0.4, delay: 0.1, animations: {}) { _ in
-            UIView.transition(with: self, duration: 0.2) {
-                self.backgroundColor = self.isSelected ? AppConstants.Design.Color.Primary.Blue :
-                                                         AppConstants.Design.Color.GrayScale.Medium
-            }
+        animateChanges {
+            self.backgroundColor = self.isSelected ? AppConstants.Design.Color.Primary.Blue :
+                                                     AppConstants.Design.Color.GrayScale.Medium
         }
     }
-    
+
+    private func animateChanges(_ changes: @escaping () -> Void) {
+        UIView.animate(withDuration: Constants.animationDuration, delay: Constants.animationDelay, animations: changes)
+    }
 }
 
-private let viewOffset = 5
+private let underlinedView = UIView()
 
